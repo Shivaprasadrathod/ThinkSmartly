@@ -1,0 +1,201 @@
+:root {
+  --primary: #4caf50;
+  --secondary: #2196f3;
+  --danger: #f44336;
+  --bg: #f5f5f5;
+  --card-bg: #fff;
+  --border-radius: 12px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  margin: 0;
+  color: #222;
+}
+
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav button {
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+nav button:hover {
+  background: var(--primary);
+}
+
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tank-status, .plants, .notifications, .logs {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.tank-bar {
+  width: 100%;
+  height: 28px;
+  background: #e0e0e0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.tank-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transition: width 0.5s;
+}
+
+.tank-label {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.plant-list {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.plant-card {
+  background: var(--bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  min-width: 220px;
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plant-card h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.moisture-bar {
+  width: 100%;
+  height: 18px;
+  background: #e0e0e0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.moisture-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  transition: width 0.5s;
+}
+
+.moisture-label {
+  font-size: 0.95rem;
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.water-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: var(--border-radius);
+  margin-top: 0.7rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.water-btn:hover {
+  background: var(--danger);
+}
+
+.notifications ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.notifications li {
+  background: #fffbe6;
+  color: #b8860b;
+  padding: 0.6rem 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 0.5rem;
+  box-shadow: var(--shadow);
+}
+
+.logs table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.logs th, .logs td {
+  padding: 0.7rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logs th {
+  background: var(--primary);
+  color: #fff;
+}
+
+.logs tr:last-child td {
+  border-bottom: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  margin-top: 2rem;
+}
+
+@media (max-width: 800px) {
+  .plant-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  main {
+    padding: 0 0.5rem;
+  }
+}

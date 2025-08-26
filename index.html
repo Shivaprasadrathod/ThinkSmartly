@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Watering System Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🌱 Smart Watering System</h1>
+    <nav>
+      <button id="manualWaterBtn">Manual Watering</button>
+      <button id="logsBtn">View Logs</button>
+      <button id="settingsBtn">Settings</button>
+    </nav>
+  </header>
+  <main>
+    <section class="tank-status">
+      <h2>💧 Water Tank Level</h2>
+      <div class="tank-bar">
+        <div class="tank-fill" style="width: 70%"></div>
+      </div>
+      <span class="tank-label">70% Full</span>
+    </section>
+    <section class="plants">
+      <h2>🌳 Plant Moisture Status</h2>
+      <div class="plant-list">
+        <div class="plant-card">
+          <h3>Tree 1</h3>
+          <div class="moisture-bar">
+            <div class="moisture-fill" style="width: 45%"></div>
+          </div>
+          <span class="moisture-label">45% Moisture</span>
+          <button class="water-btn" data-id="1">Water Now</button>
+        </div>
+        <div class="plant-card">
+          <h3>Tree 2</h3>
+          <div class="moisture-bar">
+            <div class="moisture-fill" style="width: 80%"></div>
+          </div>
+          <span class="moisture-label">80% Moisture</span>
+          <button class="water-btn" data-id="2">Water Now</button>
+        </div>
+        <!-- Add more plant cards as needed -->
+      </div>
+    </section>
+    <section class="notifications">
+      <h2>🔔 Notifications</h2>
+      <ul>
+        <li>Low tank water level detected!</li>
+        <li>Automatic watering started for Tree 1.</li>
+        <li>Maintenance: Sensor disconnected on Tree 2.</li>
+      </ul>
+    </section>
+    <section class="logs">
+      <h2>📊 Watering & Moisture Logs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Tree</th>
+            <th>Moisture (%)</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2025-08-27</td>
+            <td>Tree 1</td>
+            <td>42</td>
+            <td>Auto Watered</td>
+          </tr>
+          <tr>
+            <td>2025-08-27</td>
+            <td>Tree 2</td>
+            <td>78</td>
+            <td>Normal</td>
+          </tr>
+          <!-- More log rows -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Smart Watering System</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
